@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link href="src/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Weather</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <img class="logo" src="images/logo1.png" width="150" alt="logo"/>  
+            </div>
+          
+            <div class="col-6">
+                <div class="form-group search">
+                    <form class="form-group search " id = "search-city">
+                        <input class="col-8 mb-3 city" 
+                        type="search"
+                        placeholder="City"
+                        id = "city-input"
+                        />
+                        <!-- <input class="submit" type="submit" value="Search"> -->
+                        <button class="location" href="#" id = "search" > <img src = "images\Vector_search_icon.svg.png" width="20px"/>
+                          <!-- <i class="fa fa-search"></i> -->
+                          <button id ="location" >
+                            <img src = "images\location-icon-png.png" width ="20px" >
+                          </button>
+                        </button>
+
+                    </form>
+                </div>
+            </div>    
+
+        </div>
+
+
+                       <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title " id = "name-city">Kyiv</h5>
+                          <p class="card-text" id="card-text">The Weather site provides a national and local weather forecast for cities, and weather chances of precipitation.
+
+                          </p>
+                          <p class="card-text"><small class="text-muted">Last updated 3 sec ago</small></p>
+
+                          <div class="card text-center ">
+                            <div class="card-header">
+                              <ul class="nav nav-tabs card-header-tabs tab-tab">
+                                <li class="nav-item tab-li">
+                                  <a class="nav-link active tab-tab" 
+                                    aria-current="true" href="#">
+                                        <p class="day-info" id = "dayInfo">
+                                            Thursday
+                                        </p>
+                                        <p class="day" id = "number-day">
+                                            17
+                                        </p>
+                                        <p class="month" id = "month" >
+                                            June
+                                        </p>
+                                        <p class="weather-decription" id = "weather-decription" >
+                                          Clear
+                                      </p>
+                                        <!-- <img class="img-wearther" src="images/sun.png" alt="weather" /> -->
+                                        <div class = "row-1" id="row-1">
+                                        <p class="col-5 min">min </p>
+                                        <p  class="col-5 max"> max  </p> 
+
+                                        </div>
+                                        <div class="row">
+                                        <p class="col-6 span-tempr-min" id = "#min-temp">15°</p>                                    
+                                    
+                                        <p class="col-6 span-tempr" id = "#max-temp"> 24° </p>
+                                        </div>
+                                  </a>
+
+                                  
+
+
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link tr-width" href="#">
+                                    <p class="day-info" id = "dayInfoSecond">
+                                        Thursday
+                                    </p>
+                                    <p class="day" id = "number-day-second">
+                                        17
+                                    </p>
+                                    <p class="month" id = "monthSec">
+                                        June
+                                    </p>
+                                    <p class="weather-decription" id = "weather-decription" >
+                                      Clear
+                                  </p>
+                                   <!-- <img class="img-wearther" src="images/sun.png" alt="weather" /> -->
+                                    <div class = "row-1" id="row-1">
+                                      <p class="col-5 min">min </p>
+                                      <p  class="col-5 max"> max  </p> 
+
+                                      </div>
+                                      <div class="row">
+                                      <p class="col-6 span-tempr" id = "#min-temp">15°</p>                                    
+                                  
+                                      <p class="col-6 span-tempr" id = "#max-temp"> 24° </p>
+                                      </div>
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link  tr-width" href="#" ">
+                                    <p class="day-info" id = "dayInfoThird">
+                                        Thursday
+                                    </p>
+                                    <p class="day" id = "number-day-third">
+                                        17
+                                    </p>
+                                    <p class="month" id = "monthThird">
+                                        June
+                                    </p>
+                                    <p class="weather-decription" id = "weather-decription" >
+                                      Clear
+                                  </p> <!-- <img class="img-wearther" src="images/sun.png" alt="weather" /> -->
+                                    <div class = "row-1" id="row-1">
+                                      <p class="col-5 min">min </p>
+                                      <p  class="col-5 max"> max  </p> 
+
+                                      </div>
+                                      <div class="row">
+                                      <p class="col-6 span-tempr" id = "#min-temp">15°</p>                                    
+                                  
+                                      <p class="col-6 span-tempr" id = "#max-temp"> 24° </p>
+                                      </div>
+                                    
+                                  </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link  tr-width" href="#" ">
+                                      <p class="day-info" id = "dayInfoFour">
+                                          Thursday
+                                      </p>
+                                      <p class="day" id = "number-day-four">
+                                          17
+                                      </p>
+                                      <p class="month" id = "monthFour">
+                                          June
+                                      </p>
+                                      <p class="weather-decription" id = "weather-decription" >
+                                        Clear
+                                    </p>
+                                      <!-- <img class="img-wearther" src="images/sun.png" alt="weather" /> -->
+                                      <div class = "row-1" id="row-1">
+                                        <p class="col-5 min">min </p>
+                                        <p  class="col-5 max"> max  </p> 
+  
+                                        </div>
+                                        <div class="row">
+                                        <p class="col-6 span-tempr" id = "#min-temp">15°</p>                                    
+                                    
+                                        <p class="col-6 span-tempr" id = "#max-temp"> 24° </p>
+                                        </div>
+                                      
+                                    </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link  tr-width" href="#"">
+                                      <p class="day-info" id = "dayInfoFive">
+                                          Thursday
+                                      </p>
+                                      <p class="day" id = "number-day-five">
+                                          17
+                                      </p>
+                                      <p class="month" id = "monthFive">
+                                          June
+                                      </p>
+                                      <p class="weather-decription" id = "weather-decription" >
+                                        Clear
+                                    </p>
+                                      <!-- <img class="img-wearther" src="images/sun.png" alt="weather" /> -->
+                                      <div class = "row-1" id="row-1">
+                                        <p class="col-5 min">min </p>
+                                        <p  class="col-5 max"> max  </p> 
+  
+                                        </div>
+                                        <div class="row">
+                                        <p class="col-6 span-tempr" id = "#min-temp">15°</p>                                    
+                                    
+                                        <p class="col-6 span-tempr" id = "#max-temp"> 24° </p>
+                                        </div>
+                                    </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link tr-width" href="#"">
+                                      <p class="day-info" id = "dayInfoSix">
+                                          Thursday
+                                      </p>
+                                      <p class="day" id = "number-day-six">
+                                          17
+                                      </p>
+                                      <p class="month" id = "monthSix">
+                                          June
+                                      </p>
+                                      <p class="weather-decription" id = "weather-decription" >
+                                        Clear
+                                    </p>
+                                      <!-- <img class="img-wearther" src="images/sun.png" alt="weather" /> -->
+                                      <div class = "row-1" id="row-1">
+                                        <p class="col-5 min">min </p>
+                                        <p  class="col-5 max"> max  </p> 
+  
+                                        </div>
+                                        <div class="row">
+                                        <p class="col-6 span-tempr" id = "#min-temp">15°</p>                                    
+                                    
+                                        <p class="col-6 span-tempr" id = "#max-temp"> 24° </p>
+                                        </div>                                      
+                                    </a>
+                                  </li>
+                                  <li class="nav-item">
+                                    <a class="nav-link tr-width" href="#"">
+                                      <p class="day-info" id = "dayInfoSev">
+                                          Thursday
+                                      </p>
+                                      <p class="day" id = "number-day-sev">
+                                          17
+                                      </p>
+                                      <p class="month" id = "monthSev">
+                                          June
+                                      </p>
+                                      <p class="weather-decription" id = "weather-decription" >
+                                        Clear
+                                    </p>
+                                      <!-- <img class="img-wearther" src="images/sun.png" alt="weather" /> -->
+                                      <div class = "row-1" id="row-1">
+                                        <p class="col-5 min">min </p>
+                                        <p  class="col-5 max"> max  </p> 
+  
+                                        </div>
+                                        <div class="row">
+                                        <p class="col-6 span-tempr" id = "#min-temp">15°</p>                                    
+                                    
+                                        <p class="col-6 span-tempr" id = "#max-temp"> 24° </p>
+                                        </div>                                      
+                                    </a>
+                                  </li>
+                              </ul>
+                            </div>
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <p class = "today-time" > The wearther:  <span id = "date"> today </span>
+                                        </p>
+                                        <img class="main-img" width="188" height="150" src="images\d200.png" alt="Clear sky" />
+                                        <div>
+                                            <p class="today-temp" id = "today-temp"> 22 </p>
+                                            <p>
+                                              <a href="#" id = "far-link" >°F </a> | 
+                                              <a href="#" id = "celc-link">°C </a>
+                                            </p>
+                                          </div>
+                                    </div>
+  
+                                    <div class="col-2 temp-pres">
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br />
+                                        <br /> 
+                                        <br />                                                                  
+                                        <p class="title">
+                                            Temperature, °C
+                                            </p>                                                                                    
+                                            <p class="title">
+                                                Humidity, %
+                                                </p>
+                                    </div>
+
+                            <div class="col">
+                                    <table class="table table-striped detail ">                                      
+                                        <tbody>
+                                          <tr>
+                                            <td colspan="2">
+                                              <table class="table mb-0">
+                                                <p class="border-0 border-end weather-day">night
+                                                </p> </div>
+                                              </table>
+                                            </td>
+                                            <td colspan="2">
+                                                <table class="table mb-0">
+                                                  <p class="border-0 border-end weather-day"> mornig
+                                                      </p>
+                                                </table>
+                                              </td> 
+                                              <td colspan="2">
+                                              <table class="table mb-0">
+                                                <p class="border-0 border-end weather-day"> afternoon
+                                                    </p>
+                                              </table>
+                                            </td>
+                                            <td colspan="2">
+                                                <table class="table mb-0">
+                                                  <p class="border-0 border-end weather-day"> everning
+                                                      </p>
+                                                </table>                                                
+                                              </td>
+                                          </tr>
+                                        <tr>
+                                            <td class="border-0 grey_time" id = "current-time-zero">0:00</td>
+                                            <td class="border-0 border-end grey_time-n" id = "current-time-three">3:00</td>
+                                            <td class="border-0 grey_time" id = "current-time-six">6:00 </td>
+                                            <td class="border-0 border-end grey_time-n" id = "current-time-nine">9:00</td>
+                                            <td class="border-0 grey_time" id = "current-time-twelve">12:00</td>
+                                            <td class="border-0 border-end grey_time-n" id = "current-time-fifth" >15:00</td>
+                                            <td class="border-0 grey_time" id = "current-time-eith" >18:00</td>
+                                            <td class="border-0 border-end grey_time-n" id = "current-time-two" >21:00</td>
+                                            
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0 img-day"><img src="images\night1.png" alt= "night" width="30"/> </td>
+                                            <td class="border-0 border-end img-day-n"><img src="images\night2.png" alt= "night" width="30"/> </td>
+                                            <td class="border-0 img-day"><img src="images\morning1.png" alt= "night" width="30"/> </td>
+                                            <td class="border-0 border-end img-day-n"><img src="images\morning2.png" alt= "night" width="30"/> </td>
+                                            <td class="border-0 img-day"><img src="images\arternoon1.png" alt= "night" width="30"/> </td>
+                                            <td class="border-0 border-end img-day-n"><img src="images\arternoon2.png" alt= "night" width="30"/> </td>
+                                            <td class="border-0 img-day"><img src="images\evening.png" alt= "night" width="30"/> </td>
+                                            <td class="border-0 border-end img-day-n"> <img src="images\evening1.png" alt= "night" width="30"/> </td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0 temperature">+17°</td>
+                                            <td class="border-0 border-end temperature">+17°</td>
+                                            <td class="border-0 temperature">+17°</td>
+                                            <td class="border-0 border-end temperature">+17°</td>
+                                            <td class="border-0 temperature">+17°</td>
+                                            <td class="border-0 border-end temperature">+17°</td>
+                                            <td class="border-0 temperature">+17°</td>
+                                            <td class="border-0 border-end temperature">+17°</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="border-0 precipitation" id = "humidity">45</td>
+                                            <td class="border-0 border-end precipitation">45</td>
+                                            <td class="border-0 precipitation">45</td>
+                                            <td class="border-0 border-end precipitation">45</td>
+                                            <td class="border-0 precipitation">45</td>
+                                            <td class="border-0 border-end precipitation">45</td>
+                                            <td class="border-0 precipitation">45</td>
+                                            <td class="border-0 border-end precipitation">45</td>
+                                        </tr>
+
+               <!--                           <tr>
+                                            <td class="border-0"></td>
+                                            <td class="border-0 border-end weather-day">night</td>
+                                            <td class="border-0 grey_time"></td>
+                                            <td class="border-0 border-end weather-day">mornig</td>
+                                            <td class="border-0 grey_time"></td>
+                                            <td class="border-0 border-end weather-day">afternoon</td>
+                                            <td class="border-0 grey_time"></td>
+                                            <td class="border-0 border-end weather-day">everning</td> 
+                                        </tr> -->                                       
+                                                                                 
+                                        </tbody>
+                                      </table>
+
+                            </div>
+
+
+                                    
+                                    </div>
+                                  </div>
+
+
+                              <p class="card-text">Be prepared with the most accurate 7-day forecast.</p>
+
+                              <p class="coded">Coded by Antonina Smetanina</p>
+                           
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+        </div>
+    </div>
+<script src = "src/index.js">
+  
+</script>
+
+
+  </body>
+</html>
