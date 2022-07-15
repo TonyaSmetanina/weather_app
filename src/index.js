@@ -244,4 +244,4 @@ function getCurrentLocation (event) {
 let currentLocationButton = document.querySelector ("#location");
 currentLocationButton.addEventListener ("click", getCurrentLocation);
 
-search ("Kyiv");
+search (`Kyiv`);
