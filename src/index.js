@@ -54,7 +54,7 @@ numberDay.innerHTML = `${today.getDate()}`;
 
 
 let dayweeksecond = document.querySelector ("#dayInfoSecond");
-dayweeksecond.innerHTML = `${days[dayIndex + 1]}`;
+dayweeksecond.innerHTML = `${days[dayIndex-1]}`;
 
 let numberDaySecond = document.querySelector ("#number-day-second");
 numberDaySecond.innerHTML = `${today.getDate()+ 1 }`;
@@ -65,7 +65,7 @@ monthYearSec.innerHTML = `${month[today.getMonth()]}`;
 
 
 let dayweekTh = document.querySelector ("#dayInfoThird");
-dayweekTh.innerHTML = `${days[dayIndex + 2]}`;
+dayweekTh.innerHTML = `${days[dayIndex - 2]}`;
 
 let numberDayTh = document.querySelector ("#number-day-third");
 numberDayTh.innerHTML = `${today.getDate()+ 2 }`;
@@ -76,7 +76,7 @@ monthYearTh.innerHTML = `${month[today.getMonth()]}`;
 
 
 let dayweekFour = document.querySelector ("#dayInfoFour");
-dayweekFour.innerHTML = `${days[dayIndex + 3]}`;
+dayweekFour.innerHTML = `${days[dayIndex - 3]}`;
 
 let numberDayFour = document.querySelector ("#number-day-four");
 numberDayFour.innerHTML = `${today.getDate()+ 3 }`;
@@ -86,7 +86,7 @@ monthYearFour.innerHTML = `${month[today.getMonth()]}`;
 
 
 let dayweekFive = document.querySelector ("#dayInfoFive");
-dayweekFive.innerHTML = `${days[dayIndex + 4]}`;
+dayweekFive.innerHTML = `${days[dayIndex - 4]}`;
 
 let numberDayFive = document.querySelector ("#number-day-five");
 numberDayFive.innerHTML = `${today.getDate()+ 4 }`;
@@ -96,7 +96,7 @@ monthYearFive.innerHTML = `${month[today.getMonth()]}`;
 
 
 let dayweekSix = document.querySelector ("#dayInfoSix");
-dayweekSix.innerHTML = `${days[dayIndex + 5]}`;
+dayweekSix.innerHTML = `${days[dayIndex - 5]}`;
 
 let numberDaySix = document.querySelector ("#number-day-six");
 numberDaySix.innerHTML = `${today.getDate()+ 5 }`;
@@ -106,7 +106,7 @@ monthYearSix.innerHTML = `${month[today.getMonth()]}`;
 
 
 let dayweekSev = document.querySelector ("#dayInfoSev");
-dayweekSev.innerHTML = `${days[dayIndex + 6 ]}`;
+dayweekSev.innerHTML = `${days[dayIndex - 6 ]}`;
 
 let numberDaySev = document.querySelector ("#number-day-sev");
 numberDaySev.innerHTML = `${today.getDate()+ 6 }`;
@@ -245,3 +245,25 @@ let currentLocationButton = document.querySelector ("#location");
 currentLocationButton.addEventListener ("click", getCurrentLocation);
 
 search (`Kyiv`);
+
+
+///Daily weather
+
+// function showDailyTemperature (response) {
+//   console.log (response);
+//   let dailyDescription = document.querySelector ("#min-temp-day-second");
+//   dailyDescription.innerHTML = `${response.data.list[0].main.temp_min}`;
+
+
+// }
+
+// function dailyWeather () {
+//   let apiKey = "2385e38ab7a755a47b225394ab5f5fc0";
+//   let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=35&lon=139&appid=${apiKey}`;
+
+//   console.log (apiUrl);
+//   axios.get(apiUrl).then(showDailyTemperature);
+
+// }
+
+// dailyWeather ();
